@@ -1,4 +1,4 @@
-# leetcode-solutions/leetcode-solutions/README.md
+# leetcode-solutions/README.md
 
 # LeetCode Solutions
 
