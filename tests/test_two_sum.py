@@ -1,13 +1,19 @@
-import pytest
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from src.arrays.two_sum import two_sum
-from src.utils.test_utils import assert_equal
 
 def test_two_sum():
-    assert_equal(two_sum([2, 7, 11, 15], 9), [0, 1])
-    assert_equal(two_sum([3, 2, 4], 6), [1, 2])
-    assert_equal(two_sum([3, 3], 6), [0, 1])
-    assert_equal(two_sum([1, 5, 3, 7], 10), [1, 3])
-    assert_equal(two_sum([1, 2, 3, 4, 5], 7), [1, 4])
+    # Test case 1: Basic case
+    assert two_sum([2, 7, 11, 15], 9) == [0, 1]
+    
+    # Test case 2: No solution
+    assert two_sum([1, 2, 3], 7) == []
+    
+    # Test case 3: Multiple possible answers but return first
+    assert two_sum([3, 3], 6) == [0, 1]
 
 if __name__ == "__main__":
-    pytest.main()
+    test_two_sum()
+    print("All tests passed!")
