@@ -1,8 +1,14 @@
-def two_sum(nums, target):
-    num_map = {}
-    for index, num in enumerate(nums):
-        complement = target - num
-        if complement in num_map:
-            return [num_map[complement], index]
-        num_map[num] = index
-    return []  # Return an empty list if no solution is found
+from typing import List
+
+def two_sum( nums: List[int], target: int) -> List[int]:
+    seen = {}
+    for i, num in enumerate(nums):
+        # print(f"for i= {i} and num= {num}")
+        complement = target-num    # 9-num
+        # print(f"compliment= {complement}")
+        if(complement in seen):
+            # print(seen[complement], i)
+            return [seen[complement],i]
+        seen[num] = i
+        # print(seen)
+    return[]
