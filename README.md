@@ -11,10 +11,6 @@ leetcode-solutions
 ├── src
 │   ├── arrays
 │   │   └── two_sum.py
-│   ├── strings
-│   ├── linked_lists  
-│   ├── trees
-│   ├── dynamic_programming
 │   └── utils
 │       └── test_utils.py
 ├── tests
