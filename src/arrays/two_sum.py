@@ -1,6 +1,6 @@
 from typing import List
 
-def two_sum( nums: List[int], target: int) -> List[int]:
+def twosum( nums: List[int], target: int) -> List[int]:
     seen = {}
     for i, num in enumerate(nums):
         # print(f"for i= {i} and num= {num}")
